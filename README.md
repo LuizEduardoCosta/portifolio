@@ -2,8 +2,34 @@
 
 Portfólio pessoal em HTML/CSS/JavaScript com estética inspirada no Windows 7/Aero.
 
-## Uso
-O conteúdo principal pode ser aberto diretamente em `index.html`. O player musical interno usa o widget oficial do Deezer, carregado pela internet dentro da própria página. Para uma experiência mais consistente em produção, publique o projeto por HTTP/HTTPS (por exemplo, GitHub Pages, Netlify, Cloudflare Pages ou Vercel).
+## Estrutura
+
+```
+index.html                 marcação da área de trabalho
+404.html                   página de erro no mesmo tema
+.nojekyll                  publica os arquivos sem processamento do Jekyll
+assets/css/styles.css      estilos
+assets/js/portfolio-data.js  conteúdo (window.PORTFOLIO)
+assets/js/app.js           janelas, menu iniciar, busca e media player
+assets/img/                foto, ícones e imagem de compartilhamento
+assets/docs/               PDF do currículo Lattes (opcional)
+```
+
+Editar o conteúdo do portfólio significa, na prática, editar `assets/js/portfolio-data.js`.
+
+## Publicação no GitHub Pages
+
+1. Envie os arquivos para o branch `main`.
+2. Em **Settings → Pages**, selecione *Deploy from a branch*, branch `main` e pasta `/ (root)`.
+3. O site fica disponível em `https://luizeduardocosta.github.io/portifolio/`.
+
+Se o repositório for renomeado ou passar a usar domínio próprio, atualize as URLs absolutas do `<head>` do `index.html` (`canonical`, `og:url`, `og:image`, `twitter:image`) e o link de retorno do `404.html`.
+
+## Uso local
+Por causa das requisições relativas, abrir `index.html` direto pelo sistema de arquivos funciona parcialmente. Prefira um servidor local — por exemplo `npx serve .` — ou a própria publicação por HTTPS.
+
+## Currículo Lattes em PDF
+A janela **Currículo Lattes** incorpora `assets/docs/curriculo-lattes-luiz-eduardo.pdf`. Enquanto o arquivo não for publicado, a janela exibe um aviso e mantém o link para a versão online do Lattes.
 
 ## Conteúdo incorporado
 - trajetória profissional e acadêmica do Currículo Lattes;
@@ -51,7 +77,7 @@ O portfólio inclui uma janela inspirada no **Media Player Classic**, mas a repr
 
 Cada lançamento pode receber uma URL/ID do Deezer no nível do álbum/single. Não é necessário cadastrar as faixas individualmente quando o lançamento está disponível como álbum no Deezer. O formato esperado é, por exemplo, `https://www.deezer.com/br/album/123456789` ou apenas o ID numérico do álbum.
 
-Enquanto os IDs dos lançamentos ainda não estiverem cadastrados no código, o modo de curadoria local pode ser aberto com `?curadoria=1`. Selecione um lançamento, clique em **Vincular Deezer** e cole a URL/ID; o vínculo fica salvo no `localStorage` do navegador. Depois da conferência, os IDs podem ser incorporados definitivamente ao arquivo HTML.
+Enquanto os IDs dos lançamentos ainda não estiverem cadastrados no código, o modo de curadoria local pode ser aberto com `?curadoria=1`. Selecione um lançamento, clique em **Vincular Deezer** e cole a URL/ID; o vínculo fica salvo no `localStorage` do navegador. Depois da conferência, os IDs podem ser incorporados definitivamente em `assets/js/portfolio-data.js`.
 
 Os links do YouTube permanecem apenas como referências externas nos perfis dos projetos artísticos quando informados; eles não são mais usados como mecanismo de reprodução do Media Player interno.
 
