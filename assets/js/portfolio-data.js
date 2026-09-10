@@ -227,7 +227,7 @@ window.PORTFOLIO = {
       },
       {
         name: "Cicatriz Invisível",
-        logoUrl: "https://scontent.fbsb9-1.fna.fbcdn.net/v/t39.30808-6/555413309_122095705641048367_2085896323864354045_n.jpg?stp=dst-jpg_tt6&cstp=mx1347x1342&ctp=s1347x1342&_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Dn7R2B9YkPYQ7kNvwF0gnmw&_nc_oc=AdrDjU9TOjzDLco59YSq80BRUwiWBkEIftRjlsr8KwBQ9dOdGfgtUft3NhxtrAoOLII&_nc_zt=23&_nc_ht=scontent.fbsb9-1.fna&_nc_gid=XJlpyUqkhznW66tM2NZSrg&_nc_ss=7b2a8&oh=00_AQKuBIwEVshLoefEVM94ghY3kycTxmF5FhTXhs15v11EYg&oe=6AA5EAFF",
+        logoUrl: "assets/img/cicatriz-invisivel-logo.png",
         handle: "@CicatrizInvisível",
         url: "https://www.youtube.com/@CicatrizInvis%C3%ADvel",
         lyricsUrl: "https://www.letras.com/cicatriz-invisivel/",
